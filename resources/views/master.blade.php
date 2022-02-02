@@ -7,41 +7,42 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css/now.css') }}">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Now</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="padding-left: 100px; background-color:white">
             <a class="navbar-brand" href="#">NOW</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categories
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+            <div class="collapse navbar-collapse"  style="padding-left: 30%" id="navbarSupportedContent">
+
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active" style="padding-left: 50px">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active" style="padding-left: 50px">
+                            <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>
+                          </li>
+                      </ul>
+
+              <form class="form-inline my-2"  style="padding-right: 100px" >
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon" style="background-color: white">
+                      <i class="fas fa-search"></i>
+                    </span>
                   </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>
-                  </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
           </nav>
@@ -53,15 +54,17 @@
         <br>
     </div>
 
+    <div class=" mt-auto">
+        <footer class="text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3  mt-auto" style="background-color: #FA4EAB; color:white">
+                  © 2022 Copyright:
+                  <a class="text-dark">NOW</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
 
-    <footer class="bg-light text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2022 Copyright:
-              <a class="text-dark">NOW</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
 
 </body>
 </html>
