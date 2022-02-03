@@ -4,27 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+{{-- CSS --}}
     <link rel="stylesheet" href="{{ URL::asset('css/now.css') }}">
-
+{{-- FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" style="text-">
     <title>Now</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
-
+    <button onclick="topFunction()" id="myBtn">
+        <img src="https://img.icons8.com/material-sharp/24/000000/sort-up.png"/>
+    </button>
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-light" style="padding-left: 100px; background-color:white">
-            <a class="navbar-brand" href="#">NOW</a>
+            <a class="navbar-brand font-weight-bold" href="#" style=" font-family: 'Montserrat', sans-serif;">NOW</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse"  style="padding-left: 30%" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse"  style="padding-left: 20%" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <div class="dropdown">
                             <li>
@@ -36,7 +40,9 @@
                               <a href="#">Skirts</a>
                             </div>
                           </div>
-
+                          <li class="nav-item active" style="padding-left: 50px">
+                            <a class="nav-link" href="#">All Products</a>
+                          </li>
                         <li class="nav-item active" style="padding-left: 50px">
                             <a class="nav-link" href="#">Contact Us</a>
                           </li>
@@ -70,6 +76,28 @@
             <!-- Copyright -->
         </footer>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+           mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+    </script>
 
 
 </body>
