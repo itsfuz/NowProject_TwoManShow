@@ -25,14 +25,20 @@
             </button>
 
             <div class="collapse navbar-collapse"  style="padding-left: 30%" id="navbarSupportedContent">
-
-
                     <ul class="navbar-nav mr-auto">
+                        <div class="dropdown">
+                            <li>
+                                <a href="" class="nav-link" id="dropbtn">Categories</a>
+                            </li>
+                            <div class="dropdown-content">
+                              <a href="#">Shirts</a>
+                              <a href="#">Pants</a>
+                              <a href="#">Skirts</a>
+                            </div>
+                          </div>
+
                         <li class="nav-item active" style="padding-left: 50px">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active" style="padding-left: 50px">
-                            <a class="nav-link" href="#">Contact Us <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Contact Us</a>
                           </li>
                       </ul>
 
