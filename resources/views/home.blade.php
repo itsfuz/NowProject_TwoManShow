@@ -34,6 +34,42 @@
 {{-- all products --}}
 <div id="allproducts" style="text-align: center">
     <h3 class="text-uppercase">All Products</h3>
+    <div class="container">
+        <div class="row delay-2">
+            <div class="col-lg">
+            Kulot
+            </div>
+            <div class="col-lg">
+            Tunik
+            </div>
+            <div class="col-lg">
+            Gamis
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg">
+            Atasan XL
+            </div>
+            <div class="col-lg">
+            Jumbo
+            </div>
+            <div class="col-lg">
+            Rok
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg">
+            Joger
+            </div>
+            <div class="col-lg">
+            Overalls
+            </div>
+            <div class="col-lg">
+            One Set
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <br><br>
@@ -41,7 +77,7 @@
 <div id="categories" style="text-align: center">
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">
-        <div class="row">
+        <div class="row delay-2">
             <div class="col-sm">
             Kulot
             </div>
@@ -82,6 +118,17 @@
 
 </div>
 
+<script>
+    function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
+  }
+}
+
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);
+</script>
 
 
 

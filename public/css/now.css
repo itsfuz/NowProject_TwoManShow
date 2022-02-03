@@ -14,9 +14,8 @@ html {
  scroll-behavior: smooth;
 }
 
-a:hover {
-    background-color: #FA4EAB;
-    color: #A3E4DB;
+a:hover{
+    transform: scale(1.5);
     transition: 0.3s;
 }
 
@@ -55,6 +54,7 @@ a:hover {
       background-color: #A3E4DB;
       text-decoration: none;
       transition: 0.3s;
+      transform: scale(1);
     }
 
   /* Show the dropdown menu on hover */
@@ -91,6 +91,27 @@ a:hover {
 
 h3 { padding: 20px; color: #FA4EAB;}
 
+/* all products */
+.col-lg {
+    border: 1pt solid;
+    padding: 50px;
+    height: 500px;
+    margin: 30px;
+    background-color: white;
+    color: #FA4EAB;
+}
+
+.col-lg:hover {
+    background-color: #A3E4DB;
+    border: white;
+    color: white;
+    transition: 0.3s;
+    transform: scale(1.1);
+    border-radius: 50px;
+}
+
+/* categories */
+
 .col-sm {
     border: 1pt solid;
     padding: 50px;
@@ -106,4 +127,18 @@ h3 { padding: 20px; color: #FA4EAB;}
     transition: 0.3s;
     transform: scale(1.15);
     border-radius: 50px;
+}
+
+/* transition */
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .col-sm {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+}
+
+.col-transition {
+    opacity: 1;
+    transform: none;
 }
