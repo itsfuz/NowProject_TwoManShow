@@ -13,7 +13,8 @@ class Product extends Model
         'product_name',
         'product_unique_id',
         'category_id',
-        'description'
+        'description',
+        'image'
 
     ];
 
