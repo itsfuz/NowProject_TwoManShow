@@ -33,13 +33,49 @@
       <br><br>
 {{-- all products --}}
 <div id="allproducts" style="text-align: center">
-    <h3>All Products</h3>
+    <h3 class="text-uppercase">All Products</h3>
 </div>
 
 <br><br>
 {{-- Categories --}}
 <div id="categories" style="text-align: center">
-    <h3>Categories</h3>
+    <h3 class="text-uppercase">Categories</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+            Kulot
+            </div>
+            <div class="col-sm">
+            Tunik
+            </div>
+            <div class="col-sm">
+            Gamis
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+            Atasan XL
+            </div>
+            <div class="col-sm">
+            Jumbo
+            </div>
+            <div class="col-sm">
+            Rok
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+            Joger
+            </div>
+            <div class="col-sm">
+            Overalls
+            </div>
+            <div class="col-sm">
+            One Set
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
