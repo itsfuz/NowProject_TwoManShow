@@ -2,13 +2,16 @@ body {
  background: url("../images/Now.png");
  height: 3469px;
  width: 100%;
-
  font-family: 'Montserrat', sans-serif;
 
  /* Center and scale the image nicely */
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+}
+
+html {
+ scroll-behavior: smooth;
 }
 
 a:hover {
@@ -83,3 +86,24 @@ a:hover {
       #myBtn:hover {
         background-color: #FA4EAB;
       }
+
+/* contents */
+
+h3 { padding: 20px; color: #FA4EAB;}
+
+.col-sm {
+    border: 1pt solid;
+    padding: 50px;
+    margin: 20px;
+    background-color: white;
+    color: #FA4EAB;
+}
+
+.col-sm:hover {
+    background-color: #A3E4DB;
+    border: white;
+    color: white;
+    transition: 0.3s;
+    transform: scale(1.15);
+    border-radius: 50px;
+}
