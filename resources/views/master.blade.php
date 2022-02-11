@@ -68,16 +68,8 @@
     </div>
 
     <div class=" mt-auto">
-        {{-- <footer class="text-center text-lg-start" id="contactus">
-            <!-- Copyright -->
-            <div class="text-center p-3  mt-auto" style="background-color: #FA4EAB; color:white">
-                  © 2022 Copyright:
-                  <a class="text-dark">NOW</a>
-            </div>
-            <!-- Copyright -->
-        </footer> --}}
 
-        <footer class="bg-dark text-center text-white" id="contactus">
+        <footer class="text-center text-white" id="contactus">
             <!-- Grid container -->
             <div class="container p-4 pb-0">
               <!-- Section: Social media -->
@@ -117,9 +109,9 @@
             <!-- Grid container -->
 
             <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2020 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            <div class="text-center p-3" id="copy" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright
+              <a class="text-white"> NOW</a>
             </div>
             <!-- Copyright -->
           </footer>
