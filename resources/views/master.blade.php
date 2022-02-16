@@ -70,7 +70,7 @@
     <div class=" mt-auto">
 
         <footer class="text-center text-white" id="contactus">
-            <!-- Grid container -->
+            {{-- <!-- Grid container -->
             <div class="container p-4 pb-0">
               <!-- Section: Social media -->
               <section class="mb-4">
@@ -106,12 +106,11 @@
               </section>
               <!-- Section: Social media -->
             </div>
-            <!-- Grid container -->
+            <!-- Grid container --> --}}
 
             <!-- Copyright -->
             <div class="text-center p-3" id="copy" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2022 Copyright
-              <a class="text-white"> NOW</a>
+              <p>© 2022 Copyright NOW</p>
             </div>
             <!-- Copyright -->
           </footer>
