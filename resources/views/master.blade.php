@@ -36,9 +36,15 @@
                                 <a href="#categories" class="nav-link" id="dropbtn">Categories</a>
                             </li>
                             <div class="dropdown-content">
-                              <a href="#">Shirts</a>
-                              <a href="#">Pants</a>
-                              <a href="#">Skirts</a>
+                              <a href="#">Kulot</a>
+                              <a href="#">Tunik</a>
+                              <a href="#">Gamis</a>
+                              <a href="#">Atasan XL</a>
+                              <a href="#">Jumbo</a>
+                              <a href="#">Rok</a>
+                              <a href="#">Joger</a>
+                              <a href="#">Overalls</a>
+                              <a href="#">One Set</a>
                             </div>
                           </div>
                           <li class="nav-item active" style="padding-left: 50px">

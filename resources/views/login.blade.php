@@ -9,28 +9,30 @@
 </head>
 <body>
 
-    <div class="container">
-        <br><br><br><br>
+    <div class="container d-flex justify-content-center">
         <div class="card">
-            <h1>LOGIN</h1>
+            <br>
             <form method="POST" action="/userlogin">
                 @csrf
-
-                <div style="padding: 50px">
-                    <div class="form-floating" style="width: 500px; justify-content:center">
-                        <input type="username" name="username" class="form-control  @error('username') is-invalid @enderror" id="floatingInput" placeholder="admin" required autocomplete="username" autofocus>
+                <h3>LOGIN</h3>
+                <br>
+                <div class="row">
+                    <div class="col-4 form-floating" style="text-align:right; padding-top:20px">
                         <label for="floatingInput">Username</label>
-                          @error('username')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
+                        <br><br>
+                        <label for="floatingPassword">Password</label>
                       </div>
 
                       <br>
-                      <div class="form-floating"  style="width: 500px;  justify-content:center">
+                      <div class="col-8 form-floating" style="align-items:flex-start; padding:10px">
+                        <input type="username" name="username" class="form-control  @error('username') is-invalid @enderror" id="floatingInput" placeholder="admin" required autocomplete="username" autofocus>
+                        @error('username')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <br>
                         <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password" required>
-                        <label for="floatingPassword">Password</label>
                           @error('password')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -38,13 +40,14 @@
                           @enderror
                       </div>
                       <br><br>
-                      <div class="row justify-content-center">
-                        <button class="login" type="submit">Login</button>
-                      </div>
-                      <div class="row justify-content-center">
-                        <p  style="font-size: 12px">Don't have an account? Register <a href="/register" style="color: #D9534F">here</a>.</p>
-                      </div>
                 </div>
+                <br>
+                <div class="row justify-content-center">
+                    <button class="w-100 btn btn-lg" type="submit" id="loginBtn">Login</button>
+                  </div>
+                  <div class="row justify-content-center">
+                    <p  style="font-size: 12px">Don't have an account? Register <a href="/register" style="color: #D9534F">here</a>.</p>
+                    </div>
                 </form>
         </div>
 
@@ -57,20 +60,21 @@
 
 <style>
     body{
-        background-image: linear-gradient(to bottom right, #FA4EAB, #A3E4DB);
+        background-image: linear-gradient(to bottom right, #FE83C6, #A3E4DB);
         width: 100%;
-        height: 500px;
+        height: fit-content;
    }
 
    .card {
-    width: 800px;
+    width: 500px;
+    height: fit-content;
     display:flex;
     justify-content:center;
     margin:auto;
     align-items: center;
     border-radius: 50px;
-    padding: 50px;
-    box-shadow: 5px 5px #A3E4DB;
+    padding: 20px;
+    box-shadow: 5px 5px #FA4EAB;
    }
 
    .login {
@@ -81,8 +85,19 @@
     color:white;
     border: none;
     width:100px;
-    padding-bottom:5px
    }
 
+
+   h3 {
+       color: black;
+        text-align: center;
+        border-bottom: 1px solid gray;
+   }
+
+
+   #loginBtn {
+    background: #FA4EAB;
+    color:white;
+   }
 
 </style>

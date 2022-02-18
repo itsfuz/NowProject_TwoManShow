@@ -25,3 +25,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/add_product', function () {
+    return view('add_product');
+});
