@@ -32,3 +32,8 @@ Route::get('/add_product', function () {
 Route::get('/product_detail', function () {
     return view('product_detail');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin_dashboard');
+});
+
