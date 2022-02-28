@@ -11,7 +11,6 @@
 
     <div class="container d-flex justify-content-center">
         <div class="card">
-            <br>
             <form method="POST" action="/userlogin">
                 @csrf
                 <h3>LOGIN</h3>
@@ -45,10 +44,7 @@
                 <div class="row justify-content-center">
                     <button class="w-100 btn btn-lg" type="submit" id="loginBtn">Login</button>
                   </div>
-                  <div class="row justify-content-center">
-                    <p  style="font-size: 12px">Don't have an account? Register <a href="/register" style="color: #D9534F">here</a>.</p>
-                    </div>
-                </form>
+            </form>
         </div>
 
     </div>
@@ -60,8 +56,7 @@
 
 <style>
     body{
-        background-image: linear-gradient(to bottom right, #FE83C6, #A3E4DB);
-        width: 100%;
+        background-image: linear-gradient(to bottom right, #A3E4DB 50%, #FE83C6 50%);
         height: fit-content;
    }
 
