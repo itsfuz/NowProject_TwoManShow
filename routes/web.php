@@ -26,5 +26,13 @@ Route::get('/login', [UserController::class, 'goToLogin']);
 Route::get('/add_product', function () {
 
     return view('add_product');
+});
 
-})->middleware('Admin');
+Route::get('/product_detail', function () {
+    return view('product_detail');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin_dashboard');
+});
+

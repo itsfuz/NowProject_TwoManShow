@@ -85,7 +85,7 @@
 
 <style>
     body{
-        background-image: linear-gradient(to bottom right, #A3E4DB 50%, #FE83C6 50%);
+        background-image: linear-gradient(to bottom right,#FE83C6 50%,#A3E4DB 50%);
         width: 100%;
         height: fit-content;
    }
@@ -100,17 +100,7 @@
     border-radius: 50px;
     padding: 20px;
     margin: auto;
-    box-shadow: 5px 5px #FA4EAB;
-   }
-
-   .login {
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    background-color: #FA4EAB;
-    color:white;
-    border: none;
-    width:100px;
+    box-shadow: 5px 5px #4f8f86;
    }
 
    h3 {
@@ -120,7 +110,7 @@
    }
 
    #addBtn {
-    background: #FA4EAB;
+    background: #4f8f86;
     color:white;
    }
 
