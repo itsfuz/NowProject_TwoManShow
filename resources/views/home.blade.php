@@ -79,22 +79,23 @@
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">
         <div class="row delay-2">
-            @foreach ($allCategories as $category){
+            @foreach ($allCategories as $category)
 
-                //print category name
 
-                @foreach ($allProducts as $product){
 
-                    @if($product->category_id == $category->id){
+                @foreach ($allProducts as $product)
+
+                    @if($product->category_id == $category->id)
 
                         <div class="col-sm">
                             Kulot
                         </div>
-                    }
-                }
 
-            }
+                    @endif
 
+
+                @endforeach
+            @endforeach
             <div class="col-sm">
             Tunik
             </div>
