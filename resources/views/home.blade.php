@@ -36,7 +36,24 @@
     <h3 class="text-uppercase">All Products</h3>
     <div class="container">
 
-        <div class="row delay-2">
+        @foreach ($allCategories as $category)
+
+                @foreach ($allProducts as $product)
+
+                    @if($product->category_id == $category->id)
+
+                        <div class="col-sm">
+                            {{$product->product_name}}
+                            {{$product->product_unique_id}}
+                            {{$category->category_name}}
+                        </div>
+
+                    @endif
+
+                @endforeach
+            @endforeach
+
+        {{-- <div class="row delay-2">
             <div class="col-lg">
             Kulot
             </div>
@@ -68,7 +85,7 @@
             <div class="col-lg">
             One Set
             </div>
-        </div>
+        </div> --}}
     </div>
 
 </div>
@@ -78,27 +95,15 @@
 <div id="categories" style="text-align: center">
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">
-        <div class="row delay-2">
-            @foreach ($allCategories as $category)
+        @foreach ($allCategories as $category)
 
-
-
-                @foreach ($allProducts as $product)
-
-                    @if($product->category_id == $category->id)
-
-                        <div class="col-sm">
-                            Kulot
-                        </div>
-
-                    @endif
-
-
-                @endforeach
-            @endforeach
             <div class="col-sm">
-            Tunik
+                {{$category->category_name}}
             </div>
+
+        @endforeach
+        {{-- <div class="row delay-2">
+
             <div class="col-sm">
             Gamis
             </div>
@@ -124,7 +129,7 @@
             <div class="col-sm">
             One Set
             </div>
-        </div>
+        </div> --}}
     </div>
 
 </div>
