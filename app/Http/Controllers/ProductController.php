@@ -10,30 +10,14 @@ class ProductController extends Controller
 {
     //
 
-    public function getProducts(){
+    public function goToHome(){
 
         $allProducts = Product::all();
         $allCategories = Categories::all();
 
-        return view('bla')
+        return view('home')
         ->with('allProducts', $allProducts)
         ->with('allCategories', $allCategories);
-
-        //in the main page
-        foreach ($allCategories as $category){
-
-            //print category name
-
-            foreach ($allProducts as $product){
-
-                if($product->category_id == $category->id){
-
-                    //print data
-                }
-            }
-
-        }
-
 
     }
 

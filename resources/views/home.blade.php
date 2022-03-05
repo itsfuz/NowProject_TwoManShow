@@ -35,6 +35,7 @@
 <div id="allproducts" style="text-align: center">
     <h3 class="text-uppercase">All Products</h3>
     <div class="container">
+
         <div class="row delay-2">
             <div class="col-lg">
             Kulot
@@ -78,9 +79,22 @@
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">
         <div class="row delay-2">
-            <div class="col-sm">
-            Kulot
-            </div>
+            @foreach ($allCategories as $category){
+
+                //print category name
+
+                @foreach ($allProducts as $product){
+
+                    @if($product->category_id == $category->id){
+
+                        <div class="col-sm">
+                            Kulot
+                        </div>
+                    }
+                }
+
+            }
+
             <div class="col-sm">
             Tunik
             </div>

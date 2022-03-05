@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/', [ProductController::class, 'goToHome']);
+
 Route::get('/login', [UserController::class, 'goToLogin']);
 
 Route::get('/add_product', function () {
