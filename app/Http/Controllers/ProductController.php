@@ -10,34 +10,31 @@ class ProductController extends Controller
 {
     //
 
-    public function getAllProducts(){
+    public function getProducts(){
 
-        $AllCategory = Categories::all();
-        $AllProduct = Product::all();
+        $allProducts = Product::all();
+        $allCategories = Categories::all();
 
-        $product = [];
+        return view('bla')
+        ->with('allProducts', $allProducts)
+        ->with('allCategories', $allCategories);
 
-        $counter = 0;
+        //in the main page
+        foreach ($allCategories as $category){
 
-        foreach($AllCategory as $categories){
-            foreach($AllProduct as $product){
+            //print category name
 
-                if($product->category_id == $categories->id){
+            foreach ($allProducts as $product){
 
-                    $product[$counter]['id'] = $product->id;
-                    $product[$counter]['product_name'] = $product->product_name;
-                    $product[$counter]['unique_id'] = $product->product_unique_id;
-                    $product[$counter]['category_name'] = $categories->category_name;
-                    $product[$counter]['image'] = $product->image;
+                if($product->category_id == $category->id){
 
-                    $counter++;
+                    //print data
                 }
             }
+
         }
 
-        return view('product')
-        ->with('products', $product)
-        ->with('counter', $counter);
+
     }
 
     public function getProductbyCategory($id){

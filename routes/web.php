@@ -21,10 +21,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [UserController::class, 'goToLogin']);
 
 Route::get('/add_product', function () {
+
     return view('add_product');
-});
+
+})->middleware('Admin');
