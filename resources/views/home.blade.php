@@ -45,13 +45,13 @@
                         <div class="col-sm">
                             {{$product->product_name}}
                             {{$product->product_unique_id}}
-                            {{$category->category_name}}
+                            {{$category->category_id}}
                         </div>
 
                     @endif
 
                 @endforeach
-            @endforeach
+        @endforeach
 
         {{-- <div class="row delay-2">
             <div class="col-lg">
