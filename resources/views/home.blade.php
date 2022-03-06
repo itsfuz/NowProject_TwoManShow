@@ -35,24 +35,26 @@
 <div id="allproducts" style="text-align: center">
     <h3 class="text-uppercase">All Products</h3>
     <div class="container">
-
+        <div class="row justify-content-center">
         @foreach ($allCategories as $category)
 
                 @foreach ($allProducts as $product)
 
-                    @if($product->category_id == $category->id)
+                        @if($product->category_id == $category->id)
 
-                        <div class="col-sm">
-                            {{$product->product_name}}
-                            {{$product->product_unique_id}}
-                            {{$category->category_id}}
-                        </div>
+                            <div class="col-7 col-sm-3" id="products">
+                                {{$product->product_name}} <br>
+                                {{$product->product_unique_id}} <br> <br>
+                                <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
+                                {{$category->category_id}}
+                            </div>
 
-                    @endif
+                        @endif
 
                 @endforeach
-        @endforeach
 
+        @endforeach
+    </div>
         {{-- <div class="row delay-2">
             <div class="col-lg">
             Kulot
@@ -95,13 +97,16 @@
 <div id="categories" style="text-align: center">
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">
-        @foreach ($allCategories as $category)
+        <div class="row justify-content-center">
+            @foreach ($allCategories as $category)
 
-            <div class="col-sm">
+            <div class="col-6 col-sm-3">
                 {{$category->category_name}}
             </div>
 
         @endforeach
+        </div>
+
         {{-- <div class="row delay-2">
 
             <div class="col-sm">
