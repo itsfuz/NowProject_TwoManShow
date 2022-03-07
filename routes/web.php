@@ -35,5 +35,7 @@ Route::get('/product_detail', function () {
 
 Route::get('/dashboard', function () {
     return view('admin_dashboard');
-});
+})->middleware('Admin');
+
+Route::post('/userLogin', [UserController::class, 'login']);
 

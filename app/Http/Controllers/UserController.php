@@ -13,7 +13,7 @@ class UserController extends Controller
         return view('login');
     }
 
-    public function login($request){
+    public function login(Request $request){
 
         $data = [
 
@@ -26,7 +26,7 @@ class UserController extends Controller
 
         if($checkValidation){
 
-            return view('dashboard'); //belom bikin
+            return view('admin_dashboard');
         }
         else{
 

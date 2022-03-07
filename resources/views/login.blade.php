@@ -11,7 +11,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="card">
-            <form method="POST" action="/userlogin">
+            <form method="POST" action="/userLogin">
                 @csrf
                 <h3>LOGIN</h3>
                 <br>
