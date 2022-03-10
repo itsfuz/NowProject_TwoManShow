@@ -13,34 +13,33 @@
     <br>
     <div class="container d-flex justify-content-center" style="align-items:center">
         <br>
+        <h3>{{$product->product_name}}</h3>
         <div class="row">
             <div class="col" style="">
                 <div class="col">
-                    <img src="{{Storage::url("../images/40f.png")}}" alt="" style="width:50px; margin:10px">
+                    <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
                 </div>
                 <div class="col">
-                    <img src="{{Storage::url("../images/40f.png")}}" alt=""  style="width:50px; margin:10px">
+                    <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
                 </div>
                 <div class="col">
-                    <img src="{{Storage::url("../images/40f.png")}}" alt="" style="width:50px; margin:10px">
+                    <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
                 </div>
                 <div class="col">
-                    <img src="{{Storage::url("../images/40f.png")}}" alt="" style="width:50px; margin:10px">
+                    <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
                 </div>
             </div>
             <div class="col">
-                <img src="{{Storage::url("../images/40f.png")}}" alt="" style="width:500px;margin:10px">
+                <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
             </div>
             <div class="col" style="align-items:center">
-                <p>Id</p>
-                <p>Name</p>
-                <p>Type</p>
+                <p>Id:  {{$product->product_unique_id}}</p>
+                <p>Name:  {{$product->product_name}}</p>
+                <p>Description:  {{$product->product_name}}</p>
                 <p>Color</p>
                 <p>Size</p>
             </div>
             <div class="w-100"></div>
-
-
         </div>
         <br>
     </div>

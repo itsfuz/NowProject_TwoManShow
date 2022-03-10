@@ -33,9 +33,13 @@ Route::get('/product_detail', function () {
     return view('product_detail');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin_dashboard');
-})->middleware('Admin');
+// Route::get('/dashboard', function () {
+//     return view('admin_dashboard');
+// })->middleware('Admin');
 
 Route::post('/userLogin', [UserController::class, 'login']);
 
+
+Route::get('/admin_dashboard', function () {
+    return view('admin_dashboard');
+});

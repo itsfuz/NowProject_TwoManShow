@@ -41,13 +41,14 @@
                 @foreach ($allProducts as $product)
 
                         @if($product->category_id == $category->id)
+                                <div class="col-7 col-sm-3" id="products">
+                                    {{$product->product_name}}<br>
+                                    {{$product->product_unique_id}} <br> <br>
+                                    <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
+                                    {{$category->category_id}}
+                                </div>
 
-                            <div class="col-7 col-sm-3" id="products">
-                                {{$product->product_name}} <br>
-                                {{$product->product_unique_id}} <br> <br>
-                                <img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px">
-                                {{$category->category_id}}
-                            </div>
+
 
                         @endif
 
