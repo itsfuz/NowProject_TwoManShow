@@ -43,3 +43,7 @@ Route::post('/userLogin', [UserController::class, 'login']);
 Route::get('/admin_dashboard', function () {
     return view('admin_dashboard');
 });
+
+Route::get('/dashboard', function () {
+    return view('admin.view_products');
+});
