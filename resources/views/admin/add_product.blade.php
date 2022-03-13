@@ -1,14 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ URL::asset('css/now.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" style="text-">
-    <title>Add Product</title>
-</head>
-<body>
-
+@extends('layouts.sidebar')
+@section('content')
     <div class="container d-flex justify-content-center">
         <div class="card" style="align-items:center">
             <br>
@@ -29,9 +20,9 @@
                         </div>
                         <br>
                         <div class="form-floating">
-                            <label for="price">Price</label>
-                          <input type="number" name="price" class="form-control @error('price') is-invalid @enderror" id="price" placeholder="190000" value="{{ old('email') }}">
-                            @error('price')
+                            <label for="description">Description</label>
+                          <input type="text" name="description" class="form-control @error('description') is-invalid @enderror" id="description">
+                            @error('description')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -40,9 +31,9 @@
                     </div>
                     <div class="col">
                         <div class="form-floating">
-                            <label for="type">Type</label>
-                            <input type="text" name="type" class="form-control @error('type') is-invalid @enderror" id="type" placeholder="Chair">
-                              @error('type')
+                            <label for="category">Category</label>
+                            <input type="text" name="category" class="form-control @error('category') is-invalid @enderror" id="category" placeholder="category">
+                              @error('category')
                                   <div class="invalid-feedback">
                                       {{ $message }}
                                   </div>
@@ -84,11 +75,11 @@
 
 
 <style>
-    body{
+    /* body{
         background-image: linear-gradient(to bottom right,#FE83C6 50%,#A3E4DB 50%);
         width: 100%;
         height: fit-content;
-   }
+   } */
 
    .card {
     width: 700px;
@@ -115,3 +106,4 @@
    }
 
 </style>
+@endsection

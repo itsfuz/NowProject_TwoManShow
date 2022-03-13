@@ -47,3 +47,13 @@ Route::get('/admin_dashboard', function () {
 Route::get('/dashboard', function () {
     return view('admin.view_products');
 });
+
+Route::get('/add_product', function () {
+    return view('admin.add_product');
+});
+
+Route::get('/add_category', function () {
+    return view('admin.add_category');
+});
+
+

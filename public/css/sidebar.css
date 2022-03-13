@@ -15,7 +15,7 @@ body{
 #sidebar{
 	min-width: 250px;
 	max-width: 250px;
-	background: #FE83C6;
+	background: #FA4EAB;
 	color: rgb(0, 0, 0);
 	transition: all 0.3s;
 }
@@ -23,7 +23,18 @@ body{
 #sidebar .sidebar-header{
 	padding: 20px;
 	background: #FE83C6;
+    /* background-image: linear-gradient(to bottom right,#A3E4DB 50%,#FE83C6 50%); */
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid white;
 }
+
+.welcome {
+    text-align:center;
+    color:black;
+    /* border-bottom: 5px solid white; */
+}
+
 #sidebar ul.components{
 	padding: 20px 0;
 }
@@ -95,21 +106,22 @@ ul ul a{
     margin-bottom: 50px;
 }
 
+    /* SCROLL TO TOP BUTTON */
 
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #ECAC5D;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-  }
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #A3E4DB;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+      }
 
-  #myBtn:hover {
-    background-color: #F3C892;
-  }
+      #myBtn:hover {
+        background-color: #FA4EAB;
+      }

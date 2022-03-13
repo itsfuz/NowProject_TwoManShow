@@ -39,14 +39,11 @@
         <nav id="sidebar">
 
              <div class="sidebar-header">
+                <a class="navbar-brand font-weight-bold" href="/" style=" font-family: 'Montserrat', sans-serif; color:black;" id="brand">NOW</a>
              </div>
-
-                <div style="padding: 20px; background-color:#FA4EAB; text-align:center; color:black;">
-                   Welcome, <b> Admin</b>
-                </div>
              <ul class="lisst-unstyled components">
                 <li>
-                    <a href="/view_products">View Products</a>
+                    <a href="/dashboard">View Products</a>
                 </li>
                 <li>
                     <a href="/add_product">Add Product</a>
@@ -55,17 +52,24 @@
                     <a href="/add_category">Add Category</a>
                 </li>
              </ul>
+
+             <div class="design">
+
+             </div>
         </nav>
 
        <div id="content" style="display:flex; flex-direction:column">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <div class="row">
-                        <button type="button" id="sidebarCollapse" class="btn" style="background-color: #FA4EAB">
+                        <button type="button" id="sidebarCollapse" class="btn" style="background-color: #A3E4DB">
                             <i class="fas fa-align-left"></i>
                         </button>
-
                     </div>
+                    <div class="welcome">
+                        <h5>Welcome, <b style="color:#FA4EAB"> Admin</b></h5>
+
+                     </div>
                 </div>
             </nav>
             <div style="display:flex; justify-content:center; margin-top:50px">

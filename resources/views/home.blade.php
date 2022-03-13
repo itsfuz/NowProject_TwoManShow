@@ -47,9 +47,6 @@
                                     <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
                                     {{$category->category_id}}
                                 </div>
-
-
-
                         @endif
 
                 @endforeach
