@@ -26,12 +26,17 @@ class UserController extends Controller
 
         if($checkValidation){
 
-            return view('admin_dashboard');
+            return view('admin.view_products');
         }
         else{
 
             return back()->with('notification', 'Account Credentials Doesnt Match!');
 
         }
+    }
+
+    public function logout(){
+
+
     }
 }
