@@ -29,12 +29,42 @@ body{
     border-bottom: 1px solid white;
 }
 
-.welcome {
-    text-align:center;
-    color:black;
-    /* border-bottom: 5px solid white; */
+/* DROPDOWN */
+.dropdown-toggle,
+.dropdown-menu {
+    border-radius: 0px !important;
 }
 
+.dropdown-item:hover {
+    color: #048A81;
+    background-color: #A3E4DB;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown{
+    text-align:center;
+    color:black;
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 5px solid white; */
+}
+.dropdown-toggle::after {
+    content: none;
+}
+/* Dropdown Button */
+#dropdownMenuButton {
+    background-color:white;
+    font-weight: bold;
+    color:#FA4EAB;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+/* SIDEBAR */
 #sidebar ul.components{
 	padding: 20px 0;
 }

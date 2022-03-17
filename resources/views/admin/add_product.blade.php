@@ -61,6 +61,52 @@
                         </div>
                     @enderror
                 </div>
+                {{-- details --}}
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <label class="form-label" for="image">Insert Detail Image 1</label>
+                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
+                            @error('image')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <br>
+                        <div>
+                            <label class="form-label" for="image">Insert Detail Image 2</label>
+                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
+                            @error('image')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <label class="form-label" for="image">Insert Detail Image 3</label>
+                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
+                            @error('image')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <br>
+                        <div>
+                            <label class="form-label" for="image">Insert Detail Image 4</label>
+                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
+                            @error('image')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
                 <br><br>
                 <button class="w-100 btn btn-lg" type="submit" id="addBtn">Add Product</button>
               </form>
@@ -91,7 +137,7 @@
     border-radius: 50px;
     padding: 20px;
     margin: auto;
-    box-shadow: 5px 5px #4f8f86;
+    box-shadow: 5px 5px black;
    }
 
    h3 {
@@ -101,8 +147,8 @@
    }
 
    #addBtn {
-    background: #4f8f86;
-    color:white;
+    background: #A3E4DB;
+    color:black;
    }
 
 </style>

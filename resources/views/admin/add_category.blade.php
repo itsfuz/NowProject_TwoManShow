@@ -60,7 +60,7 @@
     border-radius: 50px;
     padding: 20px;
     margin: auto;
-    box-shadow: 5px 5px #4f8f86;
+    box-shadow: 5px 5px black;
    }
 
    h3 {
@@ -70,8 +70,8 @@
    }
 
    #addBtn {
-    background: #4f8f86;
-    color:white;
+    background: #A3E4DB;
+    color:black;
    }
 
 </style>

@@ -66,10 +66,20 @@
                             <i class="fas fa-align-left"></i>
                         </button>
                     </div>
-                    <div class="welcome">
-                        <h5>Welcome, <b style="color:#FA4EAB"> Admin</b></h5>
-
-                     </div>
+                    <div class="row">
+                        <div class="dropdown">
+                            <h5>
+                                Welcome,
+                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Admin
+                                </button>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/profile">Profile</a>
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <div style="display:flex; justify-content:center; margin-top:50px">
