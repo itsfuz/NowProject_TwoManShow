@@ -108,7 +108,11 @@
                     </div>
                 </div>
                 <br><br>
-                <button class="w-100 btn btn-lg" type="submit" id="addBtn">Add Product</button>
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <button class="w-100 btn btn-lg" type="submit" id="addBtn">Add Product</button>
+                    </div>
+                </div>
               </form>
               <br>
         </div>

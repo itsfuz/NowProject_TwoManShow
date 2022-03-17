@@ -24,11 +24,6 @@ Route::get('/', [ProductController::class, 'goToHome']);
 
 Route::get('/login', [UserController::class, 'goToLogin']);
 
-Route::get('/add_product', function () {
-
-    return view('add_product');
-});
-
 Route::get('/product_detail', function () {
     return view('product_detail');
 });
@@ -38,11 +33,6 @@ Route::get('/product_detail', function () {
 // })->middleware('Admin');
 
 Route::post('/userLogin', [UserController::class, 'login']);
-
-
-Route::get('/admin_dashboard', function () {
-    return view('admin_dashboard');
-});
 
 Route::get('/dashboard', function () {
     return view('admin.view_products');

@@ -10,7 +10,7 @@ class UserController extends Controller
 
     public function goToLogin(){
 
-        return view('login');
+        return view('admin.login');
     }
 
     public function login(Request $request){
