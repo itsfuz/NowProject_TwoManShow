@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -34,16 +35,15 @@ Route::post('/userLogin', [UserController::class, 'login']);
 
 Route::get('/add_product', [UserController::class, 'AddProductPage']);
 
+Route::post('AddProduct', [ProductController::class, 'AddProduct']);
+
+Route::get('/add_category', [CategoriesController::class,'AddCategoryPage']);
+
+route::post('/AddCategory', [CategoriesController::class, '/AddCategory']);
+
 Route::get('/dashboard', function () {
     return view('admin.view_products');
 });
 
-Route::get('/add_product', function () {
-    return view('admin.add_product');
-});
-
-Route::get('/add_category', function () {
-    return view('admin.add_category');
-});
 
 

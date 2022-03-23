@@ -49,7 +49,7 @@ class ProductController extends Controller
         ->with('counter', $counter);
     }
 
-    public function addProduct(Request $request){
+    public function AddProduct(Request $request){
 
 
         $rules = [
@@ -102,6 +102,7 @@ class ProductController extends Controller
         $newProduct->detail_3 = 'product-image/'.$imageName3;
         $newProduct->detail_4 = 'product-image/'.$imageName4;
 
+        $newProduct->save();
         return redirect('/dashboard')->with('notification', 'Product Successfully Added!');
     }
 }
