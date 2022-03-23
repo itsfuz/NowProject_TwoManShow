@@ -32,6 +32,8 @@ Route::get('/product_detail', function () {
 //     return view('admin_dashboard');
 // })->middleware('Admin');
 
+Route::get('/logout', [UserController::class, 'logout']);
+
 Route::post('/userLogin', [UserController::class, 'login']);
 
 Route::get('/dashboard', function () {

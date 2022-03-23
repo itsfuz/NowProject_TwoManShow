@@ -37,6 +37,8 @@ class UserController extends Controller
 
     public function logout(){
 
+        auth()->logout();
 
+        return view('admin.login');
     }
 }
