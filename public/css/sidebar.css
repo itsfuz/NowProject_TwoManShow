@@ -15,7 +15,7 @@ body{
 #sidebar{
 	min-width: 250px;
 	max-width: 250px;
-	background: #FA4EAB;
+	   background-image: linear-gradient(to bottom right,#A3E4DB 60%,#FE83C6 40%);
 	color: rgb(0, 0, 0);
 	transition: all 0.3s;
 }
@@ -85,7 +85,7 @@ body{
 
 #sidebar ul li a:hover{
 	color: #048A81;
-	background: #A3E4DB;
+	/* background: #A3E4DB; */
 }
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
