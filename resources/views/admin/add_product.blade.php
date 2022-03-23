@@ -9,7 +9,7 @@
                 <br>
                 <div class="row">
                     <div class="col">
-                        <div class="form-floating">
+                        <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="name" value="{{ old('name') }}">
                             @error('name')
@@ -19,7 +19,7 @@
                             @enderror
                         </div>
                         <br>
-                        <div class="form-floating">
+                        <div class="form-group">
                             <label for="description">Description</label>
                           <input type="text" name="description" class="form-control @error('description') is-invalid @enderror" id="description">
                             @error('description')
@@ -28,19 +28,24 @@
                                 </div>
                             @enderror
                         </div>
+                        <br>
                     </div>
-                    <div class="col">
-                        <div class="form-floating">
+                    <div class="col-lg justify-content-center">
+                        <div class="form-group">
                             <label for="category">Category</label>
-                            <input type="text" name="category" class="form-control @error('category') is-invalid @enderror" id="category" placeholder="category">
-                              @error('category')
-                                  <div class="invalid-feedback">
-                                      {{ $message }}
-                                  </div>
-                              @enderror
-                          </div>
+                            <select id="category" class="form-control" placeholder="Category">
+                                @foreach ($categories as $category)
+                                    <option>{{$category->id}} - {{$category->category_name}}</option>
+                                @endforeach
+                            </select>
+                                @error('category')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                        </div>
                           <br>
-                          <div class="form-floating">
+                          <div class="form-group">
                             <label for="color">Color</label>
                               <input type="text" name="color" class="form-control @error('color') is-invalid @enderror" id="color" placeholder="Brown">
                               @error('color')
@@ -125,12 +130,6 @@
 
 
 <style>
-    /* body{
-        background-image: linear-gradient(to bottom right,#FE83C6 50%,#A3E4DB 50%);
-        width: 100%;
-        height: fit-content;
-   } */
-
    .card {
     width: 700px;
     height: fit-content;

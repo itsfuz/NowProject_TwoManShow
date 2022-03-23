@@ -38,9 +38,7 @@
     <div class="container">
         <div class="row justify-content-center">
         @foreach ($allCategories as $category)
-
                 @foreach ($allProducts as $product)
-
                         @if($product->category_id == $category->id)
                                 <div class="col-7 col-sm-3" id="products">
                                     {{$product->product_name}}<br>
@@ -49,9 +47,7 @@
                                     {{$category->category_id}}
                                 </div>
                         @endif
-
                 @endforeach
-
         @endforeach
     </div>
 
@@ -66,12 +62,10 @@
     <div class="container">
         <div class="row justify-content-center">
             @foreach ($allCategories as $category)
-
-            <div class="col-6 col-sm-3">
-                {{$category->category_name}}
-            </div>
-
-        @endforeach
+                <div class="col-6 col-sm-3">
+                    {{$category->category_name}}
+                </div>
+            @endforeach
         </div>
 
     </div>

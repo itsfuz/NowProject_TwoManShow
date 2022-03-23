@@ -31,22 +31,9 @@
 
             <div class="collapse navbar-collapse"  style="padding-left: 20%" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <div class="dropdown">
-                            <li>
-                                <a href="#categories" class="nav-link" id="dropbtn">Categories</a>
+                            <li class="nav-item active" style="padding-left: 50px; color: black">
+                                <a href="#categories" class="nav-link">Categories</a>
                             </li>
-                            <div class="dropdown-content">
-                              <a href="#">Kulot</a>
-                              <a href="#">Tunik</a>
-                              <a href="#">Gamis</a>
-                              <a href="#">Atasan XL</a>
-                              <a href="#">Jumbo</a>
-                              <a href="#">Rok</a>
-                              <a href="#">Joger</a>
-                              <a href="#">Overalls</a>
-                              <a href="#">One Set</a>
-                            </div>
-                          </div>
                           <li class="nav-item active" style="padding-left: 50px">
                             <a class="nav-link" href="#allproducts">All Products</a>
                           </li>
