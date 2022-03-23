@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categories;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -40,5 +41,12 @@ class UserController extends Controller
         auth()->logout();
 
         return view('admin.login');
+    }
+
+    public function AddProductPage(){
+
+        $categories = Categories::All();
+
+        return view('admin.add_product')->with('categories', $categories);
     }
 }

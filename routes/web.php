@@ -32,6 +32,8 @@ Route::get('/logout', [UserController::class, 'logout']);
 
 Route::post('/userLogin', [UserController::class, 'login']);
 
+Route::get('/add_product', [UserController::class, 'AddProductPage']);
+
 Route::get('/dashboard', function () {
     return view('admin.view_products');
 });
