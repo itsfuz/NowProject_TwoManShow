@@ -46,4 +46,9 @@ class ProductController extends Controller
         ->with('products', $product)
         ->with('counter', $counter);
     }
+
+    public function addProduct(Request $request){
+
+
+    }
 }

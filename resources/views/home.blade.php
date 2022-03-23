@@ -31,7 +31,8 @@
         </a>
       </div>
       <br><br>
-{{-- all products --}}
+
+{{-- DISPLAY PRODUCTS --}}
 <div id="allproducts" style="text-align: center">
     <h3 class="text-uppercase">All Products</h3>
     <div class="container">
@@ -53,39 +54,7 @@
 
         @endforeach
     </div>
-        {{-- <div class="row delay-2">
-            <div class="col-lg">
-            Kulot
-            </div>
-            <div class="col-lg">
-            Tunik
-            </div>
-            <div class="col-lg">
-            Gamis
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg">
-            Atasan XL
-            </div>
-            <div class="col-lg">
-            Jumbo
-            </div>
-            <div class="col-lg">
-            Rok
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg">
-            Joger
-            </div>
-            <div class="col-lg">
-            Overalls
-            </div>
-            <div class="col-lg">
-            One Set
-            </div>
-        </div> --}}
+
     </div>
 
 </div>
@@ -105,34 +74,6 @@
         @endforeach
         </div>
 
-        {{-- <div class="row delay-2">
-
-            <div class="col-sm">
-            Gamis
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-            Atasan XL
-            </div>
-            <div class="col-sm">
-            Jumbo
-            </div>
-            <div class="col-sm">
-            Rok
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-            Joger
-            </div>
-            <div class="col-sm">
-            Overalls
-            </div>
-            <div class="col-sm">
-            One Set
-            </div>
-        </div> --}}
     </div>
 
 </div>
