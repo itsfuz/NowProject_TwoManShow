@@ -70,7 +70,7 @@
                         <div class="dropdown">
                             <h5>
                                 Welcome,
-                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Admin
                                 </button>
                             </h5>
