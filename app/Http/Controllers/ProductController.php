@@ -53,9 +53,9 @@ class ProductController extends Controller
 
 
         $rules = [
-            'name' => 'required',
+            'product_name' => 'required',
+            'product_unqiue_id' => 'required',
             'description' => 'required',
-            'category' => 'required',
             'color' => 'required',
             'image' => 'required|mimes:jpg,png',
             'detail_1' => 'required|mimes:jpg,png',
@@ -64,11 +64,11 @@ class ProductController extends Controller
             'detail_4' => 'required|mimes:jpg,png',
         ];
 
-        $validator = Validator::make($request->all(), $rules);
+        // $validator = Validator::make($request->all(), $rules);
 
-        if($validator->fails()){
-            return back()->withErrors($validator);
-        }
+        // if($validator->fails()){
+        //     return back()->withErrors($validator);
+        // }
 
         $file = $request->file('image');
         $imageName = time().'.'.$file->getClientOriginalExtension();
@@ -92,16 +92,17 @@ class ProductController extends Controller
 
         $newProduct = new Product();
 
-        $newProduct->product_name = $request->name;
+        $newProduct->product_name = $request->product_name;
         $newProduct->product_unique_id = $request->product_unique_id;
         $newProduct->description = $request->description;
+        $newProduct->category_id = $request->category_id;
         $newProduct->color = $request->color;
         $newProduct->image = $imageName;
         $newProduct->detail_1 = 'product-image/'.$imageName1;
         $newProduct->detail_2 = 'product-image/'.$imageName2;
         $newProduct->detail_3 = 'product-image/'.$imageName3;
         $newProduct->detail_4 = 'product-image/'.$imageName4;
-        DD($newProduct);
+
         $newProduct->save();
         return redirect('/dashboard')->with('notification', 'Product Successfully Added!');
     }

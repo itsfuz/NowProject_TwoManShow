@@ -3,16 +3,17 @@
     <div class="container d-flex justify-content-center">
         <div class="card" style="align-items:center">
             <br>
-            <form action="/AddProduct" method="POST" enctype="multipart/form-data">
+
+            <form  action="/AddProduct/" method="POST" enctype="multipart/form-data">
                 @csrf
                 <h3>ADD PRODUCT</h3>
                 <br>
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="name">Product Name</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Name" value="{{ old('name') }}">
-                            @error('name')
+                            <label for="product_name">Product Name</label>
+                            <input type="text" name="product_name" class="form-control @error('product_name') is-invalid @enderror" id="name" placeholder="product_name" value="{{ old('name') }}">
+                            @error('product_name')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -32,13 +33,14 @@
                     </div>
                     <div class="col-lg justify-content-center">
                         <div class="form-group">
-                            <label for="category">Category</label>
-                            <select id="category" class="form-control" placeholder="Category">
+                            <label for="category_id">Category</label>
+                            <select id="category_id" name="category_id" class="form-control" placeholder="Category">
                                 @foreach ($categories as $category)
-                                    <option>{{$category->id}} - {{$category->category_name}}</option>
+                                    <option>{{$category->id}}</option>
+
                                 @endforeach
                             </select>
-                                @error('category')
+                                @error('category_id')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -83,9 +85,9 @@
                 <div class="row">
                     <div class="col">
                         <div>
-                            <label class="form-label" for="image">Insert Detail Image 1</label>
-                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
-                            @error('image')
+                            <label class="form-label" for="detail_1">Insert Detail Image 1</label>
+                            <input type="file" name="detail_1" class="form-control @error('detail_1') is-invalid @enderror" id="detail_1" style="height: fit-content">
+                            @error('detail_1')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -93,9 +95,9 @@
                         </div>
                         <br>
                         <div>
-                            <label class="form-label" for="image">Insert Detail Image 2</label>
-                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
-                            @error('image')
+                            <label class="form-label" for="detail_2">Insert Detail Image 2</label>
+                            <input type="file" name="detail_2" class="form-control @error('detail_2') is-invalid @enderror" id="detail_2" style="height: fit-content">
+                            @error('detail_2')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -104,9 +106,9 @@
                     </div>
                     <div class="col">
                         <div>
-                            <label class="form-label" for="image">Insert Detail Image 3</label>
-                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
-                            @error('image')
+                            <label class="form-label" for="detail_3">Insert Detail Image 3</label>
+                            <input type="file" name="detail_3" class="form-control @error('detail_3') is-invalid @enderror" id="detail_3" style="height: fit-content">
+                            @error('detail_3')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -114,9 +116,9 @@
                         </div>
                         <br>
                         <div>
-                            <label class="form-label" for="image">Insert Detail Image 4</label>
-                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" style="height: fit-content">
-                            @error('image')
+                            <label class="form-label" for="detail_4">Insert Detail Image 4</label>
+                            <input type="file" name="detail_4" class="form-control @error('detail_4') is-invalid @enderror" id="detail_4" style="height: fit-content">
+                            @error('detail_4')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
