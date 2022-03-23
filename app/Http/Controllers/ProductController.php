@@ -101,7 +101,7 @@ class ProductController extends Controller
         $newProduct->detail_2 = 'product-image/'.$imageName2;
         $newProduct->detail_3 = 'product-image/'.$imageName3;
         $newProduct->detail_4 = 'product-image/'.$imageName4;
-
+        DD($newProduct);
         $newProduct->save();
         return redirect('/dashboard')->with('notification', 'Product Successfully Added!');
     }

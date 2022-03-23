@@ -3,15 +3,15 @@
     <div class="container d-flex justify-content-center">
         <div class="card" style="align-items:center">
             <br>
-            <form action="/addFurniture" method="POST" enctype="multipart/form-data">
+            <form action="/AddProduct" method="POST" enctype="multipart/form-data">
                 @csrf
                 <h3>ADD PRODUCT</h3>
                 <br>
                 <div class="row">
                     <div class="col">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="name" value="{{ old('name') }}">
+                            <label for="name">Product Name</label>
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="Name" value="{{ old('name') }}">
                             @error('name')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -20,9 +20,9 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="description">Description</label>
-                          <input type="text" name="description" class="form-control @error('description') is-invalid @enderror" id="description">
-                            @error('description')
+                            <label for="product_unique_id">Product ID</label>
+                            <input type="text" name="product_unique_id" class="form-control @error('product_unique_id') is-invalid @enderror" id="product_unique_id" placeholder="product_unique_id" value="{{ old('product_unique_id') }}">
+                            @error('product_unique_id')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -55,6 +55,18 @@
                               @enderror
                           </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                      <input type="text" name="description" class="form-control @error('description') is-invalid @enderror" id="description">
+                        @error('description')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <br>
                 </div>
                 <br>
                 <div>

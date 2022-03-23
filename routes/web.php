@@ -35,11 +35,11 @@ Route::post('/userLogin', [UserController::class, 'login']);
 
 Route::get('/add_product', [UserController::class, 'AddProductPage']);
 
-Route::post('AddProduct', [ProductController::class, 'AddProduct']);
+Route::post('/AddProduct', [ProductController::class, 'AddProduct']);
 
 Route::get('/add_category', [CategoriesController::class,'AddCategoryPage']);
 
-route::post('/AddCategory', [CategoriesController::class, '/AddCategory']);
+route::post('/AddCategory', [CategoriesController::class, 'AddCategory']);
 
 Route::get('/dashboard', function () {
     return view('admin.view_products');
