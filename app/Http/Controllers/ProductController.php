@@ -76,19 +76,19 @@ class ProductController extends Controller
 
         $file = $request->file('detail_1');
         $imageName1 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/product-image', $file, $imageName1);
+        Storage::putFileAs('public/images', $file, $imageName1);
 
         $file = $request->file('detail_2');
         $imageName2 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/product-image', $file, $imageName2);
+        Storage::putFileAs('public/images', $file, $imageName2);
 
         $file = $request->file('detail_3');
         $imageName3 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/product-image', $file, $imageName3);
+        Storage::putFileAs('public/images', $file, $imageName3);
 
         $file = $request->file('detail_4');
         $imageName4 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/product-image', $file, $imageName4);
+        Storage::putFileAs('public/images', $file, $imageName4);
 
         $newProduct = new Product();
 
@@ -97,11 +97,11 @@ class ProductController extends Controller
         $newProduct->description = $request->description;
         $newProduct->category_id = $request->category_id;
         $newProduct->color = $request->color;
-        $newProduct->image = $imageName;
-        $newProduct->detail_1 = 'product-image/'.$imageName1;
-        $newProduct->detail_2 = 'product-image/'.$imageName2;
-        $newProduct->detail_3 = 'product-image/'.$imageName3;
-        $newProduct->detail_4 = 'product-image/'.$imageName4;
+        $newProduct->image = 'product-image/'.$imageName;
+        $newProduct->detail_1 = 'images/'.$imageName1;
+        $newProduct->detail_2 = 'images/'.$imageName2;
+        $newProduct->detail_3 = 'images/'.$imageName3;
+        $newProduct->detail_4 = 'images/'.$imageName4;
 
         $newProduct->save();
         return redirect('/dashboard')->with('notification', 'Product Successfully Added!');
