@@ -14,15 +14,16 @@
                         @foreach ($allProducts as $product)
                                 @if($product->category_id == $category->id)
                                         <div class="col" id="products">
-                                            <div class="card"  style=" align-items:center; width:300px;">
+                                            <div class="card"  style=" align-items:center; width:300px; height: 600px">
                                                 <br><br>
                                                 <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
                                                 <br>
-                                                <p>Product Name: {{$product->product_name}}</p>
-                                                <p>Product ID: {{$product->product_unique_id}}</p>
-                                                <p>Product Category: {{$category->category_name}}</p>
+                                                <div style="text-align: left;  padding:20px">
+                                                    <p>Product Name: <br> <b>{{$product->product_unique_id}} - {{$product->product_name}}</b></p>
+                                                    <p>Product Category: <br> <b>{{$product->category_id}} - {{$category->category_name}}</b></p>
+                                                </div>
                                                 <button type="button" class="btn" style="background-color: #FA4EAB; color: white">Update Product</button>
-                                                <br>
+                                                <br><br>
                                             </div>
 
                                         </div>
