@@ -32,31 +32,29 @@
       </div>
       <br><br>
 
-{{-- DISPLAY PRODUCTS --}}
+{{-- ALL PRODUCTS --}}
 <div id="allproducts" style="text-align: center">
     <h3 class="text-uppercase">All Products</h3>
     <div class="container">
         <div class="row justify-content-center">
-        @foreach ($allCategories as $category)
-                @foreach ($allProducts as $product)
-                        @if($product->category_id == $category->id)
-                                <div class="col-7 col-sm-3" id="products">
-                                    {{$product->product_name}}<br>
-                                    {{$product->product_unique_id}} <br> <br>
-                                    <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
-                                    {{$category->category_id}}
-                                </div>
-                        @endif
-                @endforeach
-        @endforeach
+            @foreach ($allCategories as $category)
+                    @foreach ($allProducts as $product)
+                            @if($product->category_id == $category->id)
+                                    <div class="col-7 col-sm-3" id="products">
+                                        {{$product->product_name}}<br>
+                                        {{$product->product_unique_id}} <br> <br>
+                                        <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
+                                        {{$category->category_id}}
+                                    </div>
+                            @endif
+                    @endforeach
+            @endforeach
+        </div>
     </div>
-
-    </div>
-
 </div>
 
 <br><br>
-{{-- Categories --}}
+{{-- CATEGORIES --}}
 <div id="categories" style="text-align: center">
     <h3 class="text-uppercase">Categories</h3>
     <div class="container">

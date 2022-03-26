@@ -41,8 +41,5 @@ Route::get('/add_category', [CategoriesController::class,'AddCategoryPage']);
 
 route::post('/AddCategory', [CategoriesController::class, 'AddCategory']);
 
-Route::get('/dashboard', function () {
-    return view('admin.view_products');
-});
-
+Route::get('/dashboard', [ProductController::class, 'viewProduct']);
 

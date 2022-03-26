@@ -23,6 +23,17 @@ class ProductController extends Controller
 
     }
 
+    public function viewProduct(){
+
+        $allProducts = Product::all();
+        $allCategories = Categories::all();
+
+        return view('admin.view_products')
+        ->with('allProducts', $allProducts)
+        ->with('allCategories', $allCategories);
+
+    }
+
     public function getProductbyCategory($id){
 
         $categoryName = Categories::where('id', $id)->category_name->get();
@@ -64,11 +75,11 @@ class ProductController extends Controller
             'detail_4' => 'required|mimes:jpg,png',
         ];
 
-        // $validator = Validator::make($request->all(), $rules);
+        $validator = Validator::make($request->all(), $rules);
 
-        // if($validator->fails()){
-        //     return back()->withErrors($validator);
-        // }
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
 
         $file = $request->file('image');
         $imageName = time().'.'.$file->getClientOriginalExtension();
