@@ -12,7 +12,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label for="product_name">Product Name</label>
-                            <input type="text" name="product_name" class="form-control @error('product_name') is-invalid @enderror" id="name" placeholder="product_name" value="{{ old('name') }}">
+                            <input type="text" name="product_name" class="form-control @error('product_name') is-invalid @enderror" id="product_name" placeholder="product_name" value="{{ old('product_name') }}">
                             @error('product_name')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -33,11 +33,12 @@
                     </div>
                     <div class="col-lg justify-content-center">
                         <div class="form-group">
-                            @foreach ($categories as $category)
-                            <label for="category_id">Category :{{$category->category_name}}</label>
+
+                            <label for="category_id">Category :</label>
                             <select id="category_id" name="category_id" class="form-control" placeholder="Category">
+                                @foreach ($categories as $category)
                                     <option>{{$category->id}}</option>
-                                    @endforeach
+                                @endforeach
                             </select>
 
                                 @error('category_id')

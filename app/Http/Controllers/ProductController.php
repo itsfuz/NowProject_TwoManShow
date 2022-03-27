@@ -64,22 +64,25 @@ class ProductController extends Controller
 
 
         $rules = [
+
             'product_name' => 'required',
             'product_unqiue_id' => 'required',
             'description' => 'required',
             'color' => 'required',
-            'image' => 'required|mimes:jpg,png',
-            'detail_1' => 'required|mimes:jpg,png',
-            'detail_2' => 'required|mimes:jpg,png',
-            'detail_3' => 'required|mimes:jpg,png',
-            'detail_4' => 'required|mimes:jpg,png',
+            // 'image' => 'mimes:jpg,png',
+            // 'detail_1' => 'mimes:jpg,png',
+            // 'detail_2' => 'mimes:jpg,png',
+            // 'detail_3' => 'mimes:jpg,png',
+            // 'detail_4' => 'mimes:jpg,png'
         ];
 
-        $validator = Validator::make($request->all(), $rules);
+        // $validator = Validator::make($request->all(), $rules);
 
-        if($validator->fails()){
-            return back()->withErrors($validator);
-        }
+        // if($validator->fails()){
+        //     // dd($validator);
+        //     return back()->withErrors($validator);
+        // }
+
 
         $file = $request->file('image');
         $imageName = time().'.'.$file->getClientOriginalExtension();
@@ -87,19 +90,19 @@ class ProductController extends Controller
 
         $file = $request->file('detail_1');
         $imageName1 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/images', $file, $imageName1);
+        Storage::putFileAs('public/product-image', $file, $imageName1);
 
         $file = $request->file('detail_2');
         $imageName2 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/images', $file, $imageName2);
+        Storage::putFileAs('public/product-image', $file, $imageName2);
 
         $file = $request->file('detail_3');
         $imageName3 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/images', $file, $imageName3);
+        Storage::putFileAs('public/product-image', $file, $imageName3);
 
         $file = $request->file('detail_4');
         $imageName4 = time().'.'.$file->getClientOriginalExtension();
-        Storage::putFileAs('public/images', $file, $imageName4);
+        Storage::putFileAs('public/product-image', $file, $imageName4);
 
         $newProduct = new Product();
 
@@ -109,10 +112,10 @@ class ProductController extends Controller
         $newProduct->category_id = $request->category_id;
         $newProduct->color = $request->color;
         $newProduct->image = 'product-image/'.$imageName;
-        $newProduct->detail_1 = 'images/'.$imageName1;
-        $newProduct->detail_2 = 'images/'.$imageName2;
-        $newProduct->detail_3 = 'images/'.$imageName3;
-        $newProduct->detail_4 = 'images/'.$imageName4;
+        $newProduct->detail_1 = 'product-image/'.$imageName1;
+        $newProduct->detail_2 = 'product-image/'.$imageName2;
+        $newProduct->detail_3 = 'product-image/'.$imageName3;
+        $newProduct->detail_4 = 'product-image/'.$imageName4;
 
         $newProduct->save();
         return redirect('/dashboard')->with('notification', 'Product Successfully Added!');
