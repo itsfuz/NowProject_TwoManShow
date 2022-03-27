@@ -33,13 +33,13 @@
                     </div>
                     <div class="col-lg justify-content-center">
                         <div class="form-group">
-                            <label for="category_id">Category</label>
+                            @foreach ($categories as $category)
+                            <label for="category_id">Category :{{$category->category_name}}</label>
                             <select id="category_id" name="category_id" class="form-control" placeholder="Category">
-                                @foreach ($categories as $category)
                                     <option>{{$category->id}}</option>
-
-                                @endforeach
+                                    @endforeach
                             </select>
+
                                 @error('category_id')
                                 <div class="invalid-feedback">
                                     {{ $message }}
