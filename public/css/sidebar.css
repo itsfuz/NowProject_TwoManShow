@@ -155,3 +155,9 @@ ul ul a{
       #myBtn:hover {
         background-color: #FA4EAB;
       }
+
+#brand {
+    font-family: 'Montserrat', sans-serif;
+    color:black;
+    padding-bottom: 20px;
+}

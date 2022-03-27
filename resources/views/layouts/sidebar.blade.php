@@ -39,7 +39,7 @@
         <nav id="sidebar">
 
              <div class="sidebar-header">
-                <a class="navbar-brand font-weight-bold" href="/" style=" font-family: 'Montserrat', sans-serif; color:black;" id="brand">NOW</a>
+                <a class="navbar-brand font-weight-bold" href="/" id="brand">NOW</a>
              </div>
              <ul class="lisst-unstyled components">
                 <li>
@@ -58,8 +58,8 @@
              </div>
         </nav>
 
-       <div id="content" style="display:flex; flex-direction:column">
-            <nav class="navbar navbar-expand-lg navbar-light">
+       <div id="content" style="display:flex; flex-direction:column;">
+            <nav class="navbar navbar-expand-lg navbar-light" style="border-bottom: 1px solid rgb(204, 204, 204)">
                 <div class="container-fluid">
                     <div class="row">
                         <button type="button" id="sidebarCollapse" class="btn" style="background-color: #A3E4DB">
@@ -68,14 +68,13 @@
                     </div>
                     <div class="row">
                         <div class="dropdown">
-                            <h5>
+                            <h4>
                                 Welcome,
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Admin
+                                    <h4>Admin</h4>
                                 </button>
-                            </h5>
+                            </h4>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="/profile">Profile</a>
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </div>
                         </div>

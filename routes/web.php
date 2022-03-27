@@ -25,21 +25,23 @@ Route::get('/', [ProductController::class, 'goToHome']);
 
 Route::get('/login', [UserController::class, 'goToLogin']);
 
-Route::get('/product_detail', function () {
-    return view('product_detail');
-});
+Route::get('/product_detail', [ProductController::class, 'getProductDetail']);
 
 Route::get('/logout', [UserController::class, 'logout']);
 
 Route::post('/userLogin', [UserController::class, 'login']);
 
 Route::get('/add_product', [UserController::class, 'AddProductPage']);
-
 Route::post('/AddProduct', [ProductController::class, 'AddProduct']);
 
 Route::get('/add_category', [CategoriesController::class,'AddCategoryPage']);
-
 route::post('/AddCategory', [CategoriesController::class, 'AddCategory']);
+
+route::delete('/delete_product/{id}', [ProductController::class, 'deleteProduct']);
+
+Route::get('/update_product', [UserController::class, 'updateProductPage']);
+Route::post('/updateProduct', [ProductController::class, 'updateProduct']);
+
 
 Route::get('/dashboard', [ProductController::class, 'viewProduct']);
 

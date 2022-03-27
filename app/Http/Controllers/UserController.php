@@ -56,4 +56,11 @@ class UserController extends Controller
 
         return view('admin.add_product')->with('categories', $categories);
     }
+
+    public function updateProductPage(){
+
+        $categories = Categories::All();
+
+        return view('admin.update_product')->with('categories', $categories);
+    }
 }

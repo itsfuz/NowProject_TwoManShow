@@ -2,8 +2,8 @@
 
 @section('content')
 <div>
-    <div class="row" style="display: flex; justify-content:center; text-align:center">
-            <h1>View Products</h1>
+    <div class="row" style="display: flex; justify-content:center; text-align:center;">
+            <h1>VIEW PRODUCTS</h1>
     </div>
     <br><br>
     {{-- ALL PRODUCTS --}}
@@ -14,15 +14,28 @@
                         @foreach ($allProducts as $product)
                                 @if($product->category_id == $category->id)
                                         <div class="col" id="products">
-                                            <div class="card"  style=" align-items:center; width:300px; height: 600px">
+                                            <div class="card"  style=" align-items:center; width:400px; height: 600px">
                                                 <br><br>
                                                 <a href="/product_detail"><img src=" {{ Storage::url($product->image) }}" alt="" style="  height: 300px; width: 250px"></a>
                                                 <br>
-                                                <div style="text-align: left;  padding:20px">
+                                                <div style="text-align: left;">
                                                     <p>Product Name: <br> <b>{{$product->product_unique_id}} - {{$product->product_name}}</b></p>
                                                     <p>Product Category: <br> <b>{{$product->category_id}} - {{$category->category_name}}</b></p>
                                                 </div>
-                                                <button type="button" class="btn" style="background-color: #FA4EAB; color: white">Update Product</button>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <a href="/update_product"><button type="submit" class="btn" style="background-color: #048A81; color: white; margin-right: 20px">Update</button></a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <form action="/delete_product/{{$product->id}}" method="POST">
+                                                            {{method_field('delete')}}
+                                                            {{ csrf_field() }}
+                                                            <button type="submit" class="btn" style="background-color: #FA4EAB; color: white;  margin-left: 20px">Delete</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+
                                                 <br><br>
                                             </div>
 

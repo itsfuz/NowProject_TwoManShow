@@ -34,7 +34,7 @@
                     <div class="col-lg justify-content-center">
                         <div class="form-group">
 
-                            <label for="category_id">Category :</label>
+                            <label for="category_id">Category</label>
                             <select id="category_id" name="category_id" class="form-control" placeholder="Category">
                                 @foreach ($categories as $category)
                                     <option>{{$category->id}}</option>
