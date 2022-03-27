@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -27,11 +28,17 @@ class UserController extends Controller
 
         if($checkValidation){
 
-            return view('admin.view_products');
+            $allCategories = Categories::all();
+            $allProducts = Product::all();
+
+            return view('admin.view_products')
+            ->with('allCategories', $allCategories)
+            ->with('allProducts', $allProducts);
         }
         else{
 
-            return back()->with('notification', 'Account Credentials Doesnt Match!');
+            return back()
+            ->with('notification', 'Account Credentials Doesnt Match!');
 
         }
     }
